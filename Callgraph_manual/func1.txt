@@ -1,0 +1,16 @@
+ 04-vul-prj-direct-many-calldepth-5/index.js
+
+makeAPICall(line number 88)
+	└──classA.func1() (line number 11)
+				└──classB.func1() (line number 23)
+							└──classC.func1() (line number 37)
+									└──classD.func1() (line number 49)
+												└──classE.func1() (line number 63)
+																	└──axios.get(`/${userId}`) (line number 66-71)
+
+Application code locations with references to the vulnerable parts of axios
+-line number 66-71
+
+Funciton Name=makeAPICall
+Date of Geneation=21 July 2025
+Mode of Generation=Manual
